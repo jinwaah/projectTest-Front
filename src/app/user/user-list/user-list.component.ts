@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './user-list.component.html'
 })
 export class UserListComponent implements OnInit {
-  articles: Observable<User[]>;
+  users: Observable<User[]>;
 
   constructor(private userService: UserService,
               private router: Router) {}
@@ -19,7 +19,7 @@ export class UserListComponent implements OnInit {
   }
 
   reloadData(): void {
-    this.articles = this.userService.getUsersList();
+    this.users = this.userService.getUsersList();
   }
 
   deleteUser(id: number): void {
@@ -32,10 +32,10 @@ export class UserListComponent implements OnInit {
         error => console.log(error));
   }
 
-  usersDetails(id: number): void {
-    this.router.navigate(['details', id]);
+  userDetails(id: number): void {
+    this.router.navigate(['detailsUser', id]);
   }
   updateUser(id: number): void {
-    this.router.navigate(['update', id]);
+    this.router.navigate(['updateUser', id]);
   }
 }

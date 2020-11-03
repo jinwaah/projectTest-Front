@@ -1,15 +1,22 @@
-<h3>Update Article</h3>
+<h3>Update User</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" required [(ngModel)]="article.title" name="title">
+        <label for="firstName">Title</label>
+        <input type="text" class="form-control" id="firstName" required [(ngModel)]="user.firstName" name="firstName">
       </div>
+    <div class="form-group">
+      <label for="lastName">Price</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="user.lastName" name="lastName">
+    </div>
+    <div class="form-group">
+      <label for="mail">Price</label>
+      <input type="text" class="form-control" id="mail" required [(ngModel)]="user.mail" name="mail">
+    </div>
 
-      <label for="price">Price</label>
-      <input type="text" class="form-control" id="price" required [(ngModel)]="article.price" name="price">
+    <div class="form-group">
+      <label for="phone">Price</label>
+      <input type="text" class="form-control" id="phone" required [(ngModel)]="user.phone" name="phone">
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>

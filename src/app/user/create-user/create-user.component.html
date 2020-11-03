@@ -1,15 +1,25 @@
-<h3>Create Article</h3>
+<h3>Create User</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
 
     <div class="form-group">
-      <label for="title">Title</label>
-      <input type="text" class="form-control" id="title" required [(ngModel)]="article.title" name="title">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="user.firstName" name="firstName">
     </div>
 
     <div class="form-group">
-      <label for="price">Price</label>
-      <input type="text" class="form-control" id="price" required [(ngModel)]="article.price" name="price">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="user.lastName" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="mail">Mail</label>
+      <input type="text" class="form-control" id="mail" required [(ngModel)]="user.mail" name="mail">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" required [(ngModel)]="user.phone" name="phone">
     </div>
 
     <button type="submit" class="btn btn-success">Submit</button>

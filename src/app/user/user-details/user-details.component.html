@@ -1,15 +1,21 @@
-<h2>Article Details</h2>
+<h2>User Details</h2>
 
 <hr/>
-<div *ngIf="article">
+<div *ngIf="user">
   <div>
-    <label><b>Title : </b></label> {{article.title}}
+    <label><b>First Name : </b></label> {{user.firstName}}
   </div>
   <div>
-    <label><b>Price : </b></label> {{article.price}}
+    <label><b>Last Name : </b></label> {{user.lastName}}
+  </div>
+  <div>
+    <label><b>Mail : </b></label> {{user.mail}}
+  </div>
+  <div>
+    <label><b>Phone : </b></label> {{user.phone}}
   </div>
 </div>
 
 <br>
 <br>
-<button (click)="list()" class="btn btn-primary">Back to Article List</button><br>
+<button (click)="list()" class="btn btn-primary">Back to User List</button><br>

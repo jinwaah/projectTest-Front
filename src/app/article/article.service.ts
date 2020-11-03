@@ -5,29 +5,29 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class ArticleService {
 
-  private baseUrl = 'http://localhost:8080/springboot-crud-rest/api/v1/users';
+  private baseUrl = 'http://localhost:8080/springboot-crud-rest/api/v1/articles';
 
   constructor(private http: HttpClient) { }
 
-  getUser(id: number): Observable<any> {
+  getArticle(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  createUser(user: object): Observable<object> {
-    return this.http.post(`${this.baseUrl}`, user);
+  createArticle(article: object): Observable<object> {
+    return this.http.post(`${this.baseUrl}`, article);
   }
 
-  updateUser(id: number, value: any): Observable<object> {
+  updateArticle(id: number, value: any): Observable<object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 
-  deleteUser(id: number): Observable<any> {
+  deleteArticle(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
 
-  getUsersList(): Observable<any> {
+  getArticlesList(): Observable<any> {
     return this.http.get(`${this.baseUrl}`);
   }
 }

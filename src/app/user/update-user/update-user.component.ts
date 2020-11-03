@@ -14,7 +14,7 @@ export class UpdateUserComponent implements OnInit {
   submitted = false;
 
   constructor(private route: ActivatedRoute, private router: Router,
-              private articleService: UserService) { }
+              private userService: UserService) { }
 
   ngOnInit(): void{
     this.user = new User();

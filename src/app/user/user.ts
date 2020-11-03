@@ -1,5 +1,7 @@
-export class Article {
-  idArticle: number;
-  title: string;
-  price: string;
+export class User {
+  idUser: number;
+  firstName: string;
+  lastName: string;
+  mail: string;
+  phone: string;
 }

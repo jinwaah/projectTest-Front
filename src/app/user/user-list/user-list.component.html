@@ -1,22 +1,26 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h2>Article List</h2>
+    <h2>User List</h2>
   </div>
   <div class="panel-body">
     <table class="table table-striped">
       <thead>
       <tr>
-        <th>Title</th>
-        <th>Price</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Mail</th>
+        <th>Phone</th>
       </tr>
       </thead>
       <tbody>
-      <tr *ngFor="let article of articles | async">
-        <td>{{article.title}}</td>
-        <td>{{article.price}}</td>
-        <td><button (click)="deleteArticle(article.idArticle)" class="btn btn-danger">Delete</button>
-          <button (click)="updateArticle(article.idArticle)" class="btn btn-danger" style="margin-left: 10px">Update</button>
-          <button (click)="articleDetails(article.idArticle)" class="btn btn-info" style="margin-left: 10px">Details</button>
+      <tr *ngFor="let user of users | async">
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.mail}}</td>
+        <td>{{user.phone}}</td>
+        <td align="right"><button (click)="deleteUser(user.idUser)" class="btn btn-danger">Delete</button>
+          <button (click)="updateUser(user.idUser)" class="btn btn-danger" style="margin-left: 10px">Update</button>
+          <button (click)="userDetails(user.idUser)" class="btn btn-info" style="margin-left: 10px">Details</button>
         </td>
       </tr>
       </tbody>
